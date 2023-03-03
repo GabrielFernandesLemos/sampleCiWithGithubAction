@@ -30,6 +30,14 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    testOptions {
+        // Configure o plugin JUnit para gerar relatórios XML
+        unitTests.all {
+            reports {
+                junitXml.enabled = true
+            }
+        }
+    }
 }
 
 dependencies {
